@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { IEmployee } from "./../employee";
+import { DataUser } from "./../dataUser";
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
@@ -6,26 +8,40 @@ import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
 
-
 @Injectable()
-<<<<<<< HEAD
-export class ConfigService {
-  constructor(private http: HttpClient) { }
+export class DatosService {
+  constructor(
+    public http: HttpClient
+  ){}
 
 
   ngOnInit() {
     /*this.getProductos();*/
-=======
+  }
+
+  getEvent() {
+    return  this.http.get<IEmployee>('https://everis-laboratoria-challenge.herokuapp.com/event').subscribe(res => {
+      console.log(res.data);
+    });
+  }
+
+  getUser(user) {
+    return this.http.post('https://everis-laboratoria-challenge.herokuapp.com/user', user).subscribe(res => {
+      console.log(res);
+    });
+  }
+
+
+}
+
+
+/*@Injectable()
 export class DatosService {
   constructor(
     private http: HttpClient
   ){ }
 
   ngOnInit() {
-
-    this.http.get('https://everis-laboratoria-challenge.herokuapp.com/event').subscribe(res => {
-      console.log(res.data);
-    });
 
     var data = {
       "name": "Nicolás",
@@ -36,7 +52,6 @@ export class DatosService {
     this.http.post('https://everis-laboratoria-challenge.herokuapp.com/user', data).subscribe(res => {
       console.log(res);
     });
->>>>>>> 77cacf17981a7d72635b4771ed0e0047a1dfc56e
   }
 
-}
+}*/
