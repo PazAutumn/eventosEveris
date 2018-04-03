@@ -18,7 +18,11 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { GoogleCalendarComponent } from './google-calendar/google-calendar.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { CommentsComponent } from './comments/comments.component';
+import { Routes, RouterModule } from'@angular/router';
 
+const routes: Routes = [
+  { path: 'login', component: LoginComponent }
+];
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { CommentsComponent } from './comments/comments.component';
     CommentsComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
 <<<<<<< HEAD
     MDBBootstrapModule.forRoot(),
