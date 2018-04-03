@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DatosService } from './services/datos.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
