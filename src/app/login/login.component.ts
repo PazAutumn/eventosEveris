@@ -19,14 +19,14 @@ export class LoginComponent implements OnInit {
       password: ['']
     })
 
-    $(".btn").click(function(){
-        var welcome = $('.welcome');
-          welcome.attr('style', 'display: none');
-          console.log(welcome);
-        var backspace = $(".backspace");
-          backspace.css('height', '2rem');
-          console.log(backspace);
-        });
+    $(".btn").click(function() {
+      var welcome = $('.welcome');
+      welcome.attr('style', 'display: none');
+      console.log(welcome);
+      var backspace = $(".backspace");
+      backspace.css('height', '2rem');
+      console.log(backspace);
+    });
   }
   onLogin() {
     this.authService.login(this.userForm.value.email, this.userForm.value.password)
