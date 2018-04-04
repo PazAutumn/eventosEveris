@@ -13,6 +13,7 @@ import { AuthService } from './auth.service';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { AppComponent } from './app.component';
@@ -31,7 +32,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
-  { path: 'sign-up', component: SignUpComponent }
+  { path: '', redirectTo: '/list-meetup', pathMatch: 'full' },
+  { path: 'list-meetup', component: ListMeetupComponent },
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'perfil', component: PerfilComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
@@ -67,9 +72,11 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireDatabaseModule
+
   ],
-  providers: [AuthService],
+  providers: [AuthService, AngularFireDatabase],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })
