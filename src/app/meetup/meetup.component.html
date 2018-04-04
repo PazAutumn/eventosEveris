@@ -1,5 +1,6 @@
 <!--Card-->
-<div class="card my-4" *ngFor="let meetup of meetups">
+<div class="card my-4"
+  *ngFor="let meetup of data | async">
   <!--Card image-->
   <div class="view hm-white-slight waves-light" mdbRippleRadius>
     <img src="../../../assets/img/event.jpg" class="img-fluid" alt={{meetup.title}}> <!-- {{meetup.src}} -->
@@ -10,10 +11,10 @@
   <!--Card content-->
   <div class="card-body">
     <!--Title-->
-    <h4 class="card-title">{{meetup.title}}}</h4>
+    <h4 class="card-title">{{meetup.title}}</h4>
     <h5>{{meetup.date}}</h5>
     <!--Text-->
-    <p class="card-text">{{meetup.abstract}}</p>
+    <p class="card-text">{{meetup.location}}</p>
     <a href="#" class="btn btn-primary waves-light" mdbRippleRadius>Ver más</a>
   </div>
 </div>
