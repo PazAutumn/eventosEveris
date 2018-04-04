@@ -15,7 +15,6 @@ import { environment } from "../environments/environment";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 
-
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { LoginComponent } from "./login/login.component";
