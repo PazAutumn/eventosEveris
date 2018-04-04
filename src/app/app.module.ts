@@ -31,7 +31,19 @@ import { WelcomeComponent } from "./welcome/welcome.component";
 import { Routes, RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 
-
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ListMeetupComponent } from './list-meetup/list-meetup.component';
+import { SearchComponent } from './search/search.component';
+import { MeetupComponent } from './meetup/meetup.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { GoogleCalendarComponent } from './google-calendar/google-calendar.component';
+import { CommentsComponent } from './comments/comments.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 const routes: Routes = [
