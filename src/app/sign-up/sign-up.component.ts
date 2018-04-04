@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter, Inject, Optional } from '@angular/core
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AuthService } from '../auth.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-sign-up',
@@ -18,6 +19,15 @@ export class SignUpComponent implements OnInit {
       email: [''],
       password: ['']
     })
+
+      $(".btn").click(function(){
+        var welcome = $('.welcome');
+          welcome.attr('style', 'display: none');
+          console.log(welcome);
+        var backspace = $(".backspace");
+          backspace.css('height', '2rem');
+          console.log(backspace);
+        });
   }
 
   onRegister() {

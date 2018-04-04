@@ -5,18 +5,20 @@
         <p class="h5 mb-4">Login</p>
           <div class="sm-form">
               <i class="fa fa-envelope prefix grey-text"></i>
-              <input type="text" matInput formControlName='email' id="orangeForm-email" class="form-control" mdbActive>
-              <label for="orangeForm-email">Your email</label>
+              <input type="text" matInput formControlName='email' id="logInForm-email" class="form-control" mdbActive>
+              <label for="logInForm-email">Your email</label>
           </div>
 
           <div class="sm-form">
               <i class="fa fa-lock prefix grey-text"></i>
-              <input type="password" matInput formControlName='password' id="orangeForm-pass" class="form-control" mdbActive>
-              <label for="orangeForm-pass">Your password</label>
+              <input type="password" matInput formControlName='password' id="logInForm-pass" class="form-control" mdbActive>
+              <label for="logInForm-pass">Your password</label>
           </div>
 
           <div class="text-center">
+            <a routerLink="/list-meetup">
               <button class="btn btn-deep-orange waves-light" (click)="onLogin()" mdbRippleRadius>Login</button>
+            </a>
           </div>
       </form>
     </div>
