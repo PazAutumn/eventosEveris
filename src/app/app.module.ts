@@ -31,7 +31,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/list-meetup', pathMatch: 'full' },
+  { path: 'list-meetup', component: ListMeetupComponent },
   { path: 'sign-up', component: SignUpComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: 'login', component: LoginComponent }
 ];
 
