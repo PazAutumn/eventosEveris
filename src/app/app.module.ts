@@ -14,7 +14,8 @@ import { GoogleCalendarComponent } from './google-calendar/google-calendar.compo
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { CommentsComponent } from './comments/comments.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { Routes, RouterModule } from'@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent }
@@ -39,11 +40,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-<<<<<<< 8fb98e5864e961f1af9e0ec635d13ed63d8508d4
     HttpClientModule,
-=======
     AppRoutingModule
->>>>>>> g Please enter the commit message for your changes. Lines starting
   ],
   providers: [],
   bootstrap: [AppComponent],
