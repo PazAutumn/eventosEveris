@@ -1,1 +1,9 @@
-
+<form [formGroup]="form">
+    <div formGroupName="name">
+        <input formControlName="first" placeholder="Nombre">
+        <input formControlName="last" placeholder="Apellido">
+    </div>
+    <input formControlName="email" placeholder="Email">
+    <input formControlName='password' placeholder="Contraseña">
+    <button (click)='onRegister'>Submit</button>
+</form>
