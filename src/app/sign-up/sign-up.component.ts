@@ -1,10 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/Rx';
+import { Component, OnInit, EventEmitter, Inject, Optional } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,24 +9,19 @@ import 'rxjs/Rx';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-  form:FormGroup;
+  userForm: FormGroup;
 
-  constructor(private http: HttpClient) { }
-
+  constructor(private fb: FormBuilder, @Optional() @Inject(MAT_DIALOG_DATA) public data: any, public authService: AuthService) { }
 
   ngOnInit() {
+    this.userForm = this.fb.group({
+      email: [''],
+      password: ['']
+    })
+  }
 
-    var data = {
-      "name": "Nicolás",
-      "lastName": "Gajardo",
-      "email": "ngajardo@everis.com",
-      "password": "1234"
-    }
-
-
-    this.http.post('https://everis-laboratoria-challenge.herokuapp.com/authentication', data).subscribe(res => {
-      console.log(res);
-    });
+  onRegister() {
+    this.authService.signup(this.userForm.value.email, this.userForm.value.password)
   }
 
 }
