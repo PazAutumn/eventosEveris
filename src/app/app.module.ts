@@ -25,15 +25,11 @@ import { SearchComponent } from "./search/search.component";
 import { MeetupComponent } from "./meetup/meetup.component";
 import { PerfilComponent } from "./perfil/perfil.component";
 import { GoogleCalendarComponent } from "./google-calendar/google-calendar.component";
-import { GoogleMapsComponent } from "./google-maps/google-maps.component";
 import { CommentsComponent } from "./comments/comments.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { Routes, RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { RatingComponent } from "./rating/rating.component";
-
-
-
 
 const routes: Routes = [
   { path: "", redirectTo: "/list-meetup", pathMatch: "full" },

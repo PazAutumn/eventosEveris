@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { ListMeetupComponent } from './list-meetup/list-meetup.component';
 
 const routes: Routes = [{ 
-  path: "events",
+  path: "list-meetup",
   component: ListMeetupComponent
 }];
 @NgModule({
