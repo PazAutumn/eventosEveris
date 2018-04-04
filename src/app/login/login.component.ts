@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Inject, Optional } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  userForm: FormGroup;
+  constructor(private fb: FormBuilder, @Optional() @Inject(MAT_DIALOG_DATA) public data: any, public authService: AuthService) { }
 
   ngOnInit() {
+    this.userForm = this.fb.group({
+      email: [''],
+      password: ['']
+    })
   }
-
+  onLogin() {
+    this.authService.login(this.userForm.value.email, this.userForm.value.password)
+  }
 }
+
+
+
+
