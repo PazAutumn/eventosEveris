@@ -28,9 +28,11 @@ import { GoogleCalendarComponent } from './google-calendar/google-calendar.compo
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { CommentsComponent } from './comments/comments.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { Routes, RouterModule } from'@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
+  { path: 'sign-up', component: SignUpComponent },
   { path: 'login', component: LoginComponent }
 ];
 
@@ -55,6 +57,7 @@ const routes: Routes = [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -68,6 +71,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     AngularFireDatabaseModule
+
   ],
   providers: [AuthService, AngularFireDatabase],
   bootstrap: [AppComponent],
