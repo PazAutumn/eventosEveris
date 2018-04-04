@@ -35,7 +35,8 @@ const routes: Routes = [
   { path: 'list-meetup', component: ListMeetupComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'perfil', component: PerfilComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'meetup', component: MeetupComponent }
 ];
 
 @NgModule({

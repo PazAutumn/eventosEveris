@@ -1,21 +1,39 @@
-<!--Card-->
-<div class="card my-4"
-  *ngFor="let meetup of data | async">
-  <!--Card image-->
-  <div class="view hm-white-slight waves-light" mdbRippleRadius>
-    <img src="../../../assets/img/event.jpg" class="img-fluid" alt={{meetup.title}}> <!-- {{meetup.src}} -->
-    <a>
-      <div class="mask"></div>
-    </a>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Título</h2> <!-- evento.title -->
+      <span>*****</span>
+    </div>
   </div>
-  <!--Card content-->
-  <div class="card-body">
-    <!--Title-->
-    <h4 class="card-title">{{meetup.title}}</h4>
-    <h5>{{meetup.date}}</h5>
-    <!--Text-->
-    <p class="card-text">{{meetup.location}}</p>
-    <a href="#" class="btn btn-primary waves-light" mdbRippleRadius>Ver más</a>
+  <div class="row">
+    <div class="col-12">
+      <button style="background-color: #9BAE0C;" type="button" class="btn btn-primary waves-light btn-sm" mdbRippleRadius>Asistiré</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <img class="img-fluid" src="../../assets/img/event.jpg" alt="event title">
+      <!-- {{evento.src}} {{evento.title}} -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <p>21-12-2018</p>
+      <p>San Isidro 951, Santiago</p>
+      <a href="#">Ver mapa</a>
+    </div>
+    <div class="col-6">
+      <p>Organizador: Emilio Silva</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>Dreamcatcher Vice YOLO photo booth XOXO Cosby sweater meggings beard organic fixie vinyl quinoa Blue Bottle before they sold
+      out iPhone kogi tofu sartorial cray blog biodiesel VHS paleo sustainable Brooklyn Intelligentsia pickled hashtag ugh disrupt
+      tattooed PBR slow-carb Echo Park butcher Neutra viral Tumblr freegan mixtape try-hard lo-fi literally Schlitz tote bag Marfa
+      mumblecore seitan next level salvia Helvetica tousled Banksy Bushwick gastropub
+      Etsy Austin authentic Pinterest raw denim fanny pack pour-over church-key bicycle rights you probably haven't heard of them
+      heirloom bespoke small batch PBR&B street art 8-bit master cleanse umami plaid fashion axe</p>
+    </div>
   </div>
 </div>
-<!--/.Card-->
