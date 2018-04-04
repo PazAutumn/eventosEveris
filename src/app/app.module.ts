@@ -14,6 +14,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { GoogleCalendarComponent } from './google-calendar/google-calendar.component';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { CommentsComponent } from './comments/comments.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CommentsComponent } from './comments/comments.component';
     PerfilComponent,
     GoogleCalendarComponent,
     GoogleMapsComponent,
-    CommentsComponent
+    CommentsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
