@@ -39,7 +39,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     MDBBootstrapModule.forRoot(),
+<<<<<<< 8fb98e5864e961f1af9e0ec635d13ed63d8508d4
     HttpClientModule,
+=======
+    AppRoutingModule
+>>>>>>> g Please enter the commit message for your changes. Lines starting
   ],
   providers: [],
   bootstrap: [AppComponent],
