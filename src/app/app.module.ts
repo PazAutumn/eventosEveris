@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
+
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { LoginComponent } from "./login/login.component";
@@ -29,6 +30,9 @@ import { CommentsComponent } from "./comments/comments.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { Routes, RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
+
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/list-meetup', pathMatch: 'full' },
@@ -50,7 +54,6 @@ const routes: Routes = [
     MeetupComponent,
     PerfilComponent,
     GoogleCalendarComponent,
-    GoogleMapsComponent,
     CommentsComponent,
     WelcomeComponent
   ],
