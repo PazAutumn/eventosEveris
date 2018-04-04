@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
@@ -15,7 +14,11 @@ import { GoogleCalendarComponent } from './google-calendar/google-calendar.compo
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { CommentsComponent } from './comments/comments.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { Routes, RouterModule } from'@angular/router';
 
+const routes: Routes = [
+  { path: 'login', component: LoginComponent }
+];
 
 @NgModule({
   declarations: [
@@ -33,8 +36,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     WelcomeComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
