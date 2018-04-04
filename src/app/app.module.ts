@@ -31,7 +31,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 const routes: Routes = [
-  { path: 'sign-up', component: SignUpComponent }
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
