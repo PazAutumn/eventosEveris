@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MeetupComponent } from './../meetup/meetup.component';
 
 @Component({
   selector: 'app-list-meetup',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListMeetupComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit() {

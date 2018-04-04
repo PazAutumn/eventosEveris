@@ -62,8 +62,8 @@
   "defaults": {
     "styleExt": "scss",
     "build": {
-      "preserveSymlinks": true
-    },
+     "preserveSymlinks": true
+   },
     "component": {
     }
   }
