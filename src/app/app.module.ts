@@ -65,7 +65,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

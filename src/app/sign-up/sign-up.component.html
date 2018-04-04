@@ -2,7 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <form [formGroup]="loginForm">
+
+      <form [formGroup]="userForm">
         <p class="h5 mb-4">Sing Up</p>
           <div class="sm-form">
               <i class="fa fa-user prefix grey-text"></i>
@@ -11,18 +12,17 @@
           </div>
           <div class="sm-form">
               <i class="fa fa-envelope prefix grey-text"></i>
-              <input type="text" id="orangeForm-email" class="form-control" mdbActive>
+
+              <input matInput formControlName='email' type="text" id="orangeForm-email" class="form-control" mdbActive>
               <label for="orangeForm-email">Your email</label>
           </div>
-
           <div class="sm-form">
               <i class="fa fa-lock prefix grey-text"></i>
-              <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
+              <input matInput formControlName='password' type="password" id="orangeForm-pass" class="form-control" mdbActive>
               <label for="orangeForm-pass">Your password</label>
           </div>
-
           <div class="text-center">
-              <button class="btn btn-deep-orange waves-light" (click)="onOpenSignUp()" mdbRippleRadius>Sign Up</button>
+              <button mat-button class="btn btn-deep-orange waves-light" (click)="onRegister()" mdbRippleRadius>Sign Up</button>
           </div>
 
       </form>
