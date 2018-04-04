@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MeetupComponent } from './../meetup/meetup.component';
 
 @Component({
   selector: 'app-list-meetup',
