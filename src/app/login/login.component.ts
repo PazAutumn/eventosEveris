@@ -1,8 +1,7 @@
 import { Component, OnInit, EventEmitter, Inject, Optional } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http'; 
-import { HttpModule } from '@angular/http';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +10,7 @@ import { HttpModule } from '@angular/http';
 })
 export class LoginComponent implements OnInit {
   userForm: FormGroup;
-  constructor(private fb: FormBuilder,  @Optional() @Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(private fb: FormBuilder, @Optional() @Inject(MAT_DIALOG_DATA) public data: any, public authService: AuthService) { }
 
   ngOnInit() {
     this.userForm = this.fb.group({
@@ -20,8 +19,7 @@ export class LoginComponent implements OnInit {
     })
   }
   onLogin() {
-    this.data.email = this.userForm.value.email;
-    this.data.password = this.userForm.value.password;
+    this.authService.login(this.userForm.value.email, this.userForm.value.password)
   }
 }
 
