@@ -8,14 +8,9 @@ import 'rxjs/Rx';
 
 
 @Injectable()
-<<<<<<< HEAD
 export class ConfigService {
   constructor(private http: HttpClient) { }
-
-
-  ngOnInit() {
-    /*this.getProductos();*/
-=======
+}
 export class DatosService {
   constructor(
     private http: HttpClient
@@ -24,7 +19,6 @@ export class DatosService {
   ngOnInit() {
 
     this.http.get('https://everis-laboratoria-challenge.herokuapp.com/event').subscribe(res => {
-      console.log(res.data);
     });
 
     var data = {
@@ -36,7 +30,6 @@ export class DatosService {
     this.http.post('https://everis-laboratoria-challenge.herokuapp.com/user', data).subscribe(res => {
       console.log(res);
     });
->>>>>>> 77cacf17981a7d72635b4771ed0e0047a1dfc56e
   }
 
 }
