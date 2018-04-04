@@ -2,8 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <form>
-        <p class="h5 mb-4">Sign up</p>
+      <form [formGroup]="loginForm">
+        <p class="h5 mb-4">Sing Up</p>
           <div class="sm-form">
               <i class="fa fa-user prefix grey-text"></i>
               <input type="text" id="orangeForm-name" class="form-control" mdbActive>
@@ -22,7 +22,7 @@
           </div>
 
           <div class="text-center">
-              <button class="btn btn-deep-orange waves-light" mdbRippleRadius>Sign up</button>
+              <button class="btn btn-deep-orange waves-light" (click)="onOpenSignUp()" mdbRippleRadius>Sign Up</button>
           </div>
 
       </form>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../services/datos.service';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +10,6 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	
   }
 
   

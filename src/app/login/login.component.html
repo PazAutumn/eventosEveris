@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <form [formGroup]='userForm'>
+        <p class="h5 mb-4">Login</p>
+          <div class="sm-form">
+              <i class="fa fa-envelope prefix grey-text"></i>
+              <input type="text" matInput formControlName='email' id="orangeForm-email" class="form-control" mdbActive>
+              <label for="orangeForm-email">Your email</label>
+          </div>
+
+          <div class="sm-form">
+              <i class="fa fa-lock prefix grey-text"></i>
+              <input type="password" matInput formControlName='password' id="orangeForm-pass" class="form-control" mdbActive>
+              <label for="orangeForm-pass">Your password</label>
+          </div>
+
+          <div class="text-center">
+              <button class="btn btn-deep-orange waves-light" (click)="onLogin()" mdbRippleRadius>Login</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <form [formGroup]='userForm' novalidate>
+  <div mat-dialog-content>
+    <p>Email</p>
+    <mat-form-field>
+      <input matInput formControlName='email'>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content>
+    <p>Password</p>
+    <mat-form-field>
+      <input matInput type="password" formControlName='password'>
+    </mat-form-field>
+  </div>
+  <button mat-button (click)="onLogin()">Login</button>
+</form> -->
