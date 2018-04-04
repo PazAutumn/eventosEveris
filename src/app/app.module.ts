@@ -13,6 +13,7 @@ import { AuthService } from './auth.service';
 import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { AppComponent } from './app.component';
@@ -68,9 +69,11 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireDatabaseModule
+
   ],
-  providers: [AuthService],
+  providers: [AuthService, AngularFireDatabase],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })
