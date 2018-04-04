@@ -7,4 +7,6 @@ import { ListMeetupComponent } from './list-meetup/list-meetup.component';
 })
 export class AppRoutingModule {}
 
-const routes: Routes = [{ path: "events", component: ListMeetupComponent }];
+const routes: Routes = [
+{ path: "events", component: ListMeetupComponent }
+];
