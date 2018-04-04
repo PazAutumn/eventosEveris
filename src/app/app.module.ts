@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
+
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
@@ -14,8 +14,7 @@ import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 
-=======
->>>>>>> 3611c3867fb5e5f536650764cf42b7f8acdace1f
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
@@ -54,9 +53,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-<<<<<<< 8fb98e5864e961f1af9e0ec635d13ed63d8508d4
     HttpClientModule,
-<<<<<<< HEAD
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -68,14 +65,9 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
-=======
-=======
-    AppRoutingModule
->>>>>>> g Please enter the commit message for your changes. Lines starting
->>>>>>> 3611c3867fb5e5f536650764cf42b7f8acdace1f
+    MatInputModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })
