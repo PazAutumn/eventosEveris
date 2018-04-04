@@ -1,3 +1,20 @@
-<p>
-  meetup works!
-</p>
+<!--Card-->
+<div class="card my-4" *ngFor="let meetup of meetups">
+  <!--Card image-->
+  <div class="view hm-white-slight waves-light" mdbRippleRadius>
+    <img src="../../../assets/img/event.jpg" class="img-fluid" alt={{meetup.title}}> <!-- {{meetup.src}} -->
+    <a>
+      <div class="mask"></div>
+    </a>
+  </div>
+  <!--Card content-->
+  <div class="card-body">
+    <!--Title-->
+    <h4 class="card-title">{{meetup.title}}}</h4>
+    <h5>{{meetup.date}}</h5>
+    <!--Text-->
+    <p class="card-text">{{meetup.abstract}}</p>
+    <a href="#" class="btn btn-primary waves-light" mdbRippleRadius>Ver más</a>
+  </div>
+</div>
+<!--/.Card-->
