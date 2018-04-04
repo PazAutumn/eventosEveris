@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="row">
-    <div *ngFor='let meetup of listmeetup' class="col-12 col-md-4">
+    <div *ngFor='let meetup of listmeetup' class="col-12 col-md-4 mb-4">
       <div class="card">
         <!--Card image-->
         <div class="view hm-white-slight waves-light" mdbRippleRadius>
@@ -22,7 +22,7 @@
           <h5>{{meetup.date}}</h5>
           <!--Text-->
           <p class="card-text">{{meetup.subtitle}}</p>
-          <a href="" class="btn btn-primary waves-light" mdbRippleRadius>Ver más</a>
+          <a routerLink="/meetup" class="btn btn-primary waves-light" style="background-color: #9BAE0C;" mdbRippleRadius>Ver más</a>
         </div>
       </div>
     </div>
