@@ -2,12 +2,12 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h2 class="mb-5">Meetups</h2>
+      <h2 class="mb-5">Próximos meetups</h2>
     </div>
   </div>
   <div class="row">
-    <div *ngFor='let meetup of listmeetup' class="col-12 col-md-4">
-      <div class="card">
+    <div *ngFor='let meetup of listmeetup' class="col-12 col-md-4 mb-4">
+      <div class="card hoverable">
         <!--Card image-->
         <div class="view hm-white-slight waves-light" mdbRippleRadius>
           <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" class="img-fluid" alt="Card image with a tree in a middle of a lake.">
@@ -22,7 +22,7 @@
           <h5>{{meetup.date}}</h5>
           <!--Text-->
           <p class="card-text">{{meetup.subtitle}}</p>
-          <a href="" class="btn btn-primary waves-light" mdbRippleRadius>Ver más</a>
+          <a routerLink="/meetup" class="btn btn-primary waves-light" style="background-color: #9BAE0C;" mdbRippleRadius>Ver más</a>
         </div>
       </div>
     </div>
